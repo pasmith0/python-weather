@@ -35,7 +35,7 @@ while i < 3 do
 end
 
 if response.condition.text.length > width
-   width = response.condition.text
+    width = response.condition.text.length
 end
 
 
