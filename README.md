@@ -1,1 +1,1 @@
-# python-weather
+# ruby-weather
