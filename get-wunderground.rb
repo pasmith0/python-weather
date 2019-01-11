@@ -37,17 +37,17 @@ if obs.weather.length > width
    width = obs.weather.length
 end
 
-printf "width %d\n", width
+#printf "width %d\n", width
 
 printf "  Now: %-#{width}s %.0f°%s, Wind %s, Humidity %s, Barometer %s %s\n", 
-    obs.weather.strip, 
+    obs.weather.strip.capitalize, 
     obs.temp_f, 'F',
     obs.wind_string.strip, 
     obs.relative_humidity,
     obs.pressure_in, 'in'
 
-printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[0].datetime.to_s).strftime('%a'), sf.days[0].conditions, sf.days[0].low.fahrenheit, 'F', sf.days[0].high.fahrenheit, 'F' 
-printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[1].datetime.to_s).strftime('%a'), sf.days[1].conditions, sf.days[1].low.fahrenheit, 'F', sf.days[1].high.fahrenheit, 'F' 
-printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[2].datetime.to_s).strftime('%a'), sf.days[2].conditions, sf.days[2].low.fahrenheit, 'F', sf.days[2].high.fahrenheit, 'F' 
+printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[0].datetime.to_s).strftime('%a'), sf.days[0].conditions.capitalize, sf.days[0].low.fahrenheit, 'F', sf.days[0].high.fahrenheit, 'F' 
+printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[1].datetime.to_s).strftime('%a'), sf.days[1].conditions.capitalize, sf.days[1].low.fahrenheit, 'F', sf.days[1].high.fahrenheit, 'F' 
+printf "  %s: %-#{width}s %.0f°%s - %.0f°%s\n", DateTime.parse(sf.days[2].datetime.to_s).strftime('%a'), sf.days[2].conditions.capitalize, sf.days[2].low.fahrenheit, 'F', sf.days[2].high.fahrenheit, 'F' 
 
 
