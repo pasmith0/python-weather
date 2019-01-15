@@ -25,7 +25,7 @@ rescue
    exit
 end
 
-printf "Forecast for %s\n", obs.display_location[0].full
+printf "Forecast for %s %s\n", obs.display_location[0].full, obs.display_location[0].zip
 printf "%s\n", obs.observation_time
 
 i = 0
