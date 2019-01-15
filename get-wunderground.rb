@@ -6,7 +6,11 @@ require 'weather-underground'
 require 'date'
 
 # Can use ZIP code, airport code, lat/long, or "city, state" for location.
-weather_id = '80601'
+if ARGV.length < 1
+   weather_id = "80601"
+else 
+   weather_id = ARGV[0]
+end
 
 begin
    wu = WeatherUnderground::Base.new
